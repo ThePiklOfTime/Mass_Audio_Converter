@@ -1,0 +1,26 @@
+# Ignore audio files
+*.m4a
+*.flac
+*.wav
+
+# Byte-compiled Python files
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment directories
+env/
+venv/
+.venv/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.DS_Store
+*.log
+
+# System files
+Thumbs.db
+.DS_Store
