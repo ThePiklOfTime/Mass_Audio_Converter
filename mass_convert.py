@@ -43,7 +43,7 @@ for dirpath, dirnames, filenames in os.walk("."):
                     print(f"Encoding {filename} from {args.input} to {args.output}...")
                     filepath_without_codec = filepath.removesuffix(file_extension)
                     ffmpeg_command = ['ffmpeg', '-i', filepath, '-c:a', codec_name_out, f'{filepath_without_codec}{file_extension_out}']
-                    subprocess.run(ffmpeg_command, check=True)
+                    subprocess.run(ffmpeg_command, check=True, capture_output=True)
                     print(f"Successfully converted {filename}.")
                     if args.delete:
                         os.remove(filepath)
