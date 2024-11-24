@@ -64,7 +64,7 @@ This is a simple script I created to batch-convert a large collection of music f
 - If you encounter any issues, ensure the required tools (`ffmpeg`, `ffprobe`) are installed and accessible.
 
 ## Limitations
-- Currently supports only Linux/Unix-based systems.
+- Currently supports only Linux/Unix-based systems. It might work on windows, but this requires further testing.
 - Assumes all audio files use standard file extensions (`.wav`, `.m4a`, `.flac`).
 
 ## License

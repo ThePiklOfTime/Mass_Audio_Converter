@@ -3,7 +3,6 @@ import subprocess
 import os
 import json
 from argparse import ArgumentParser
-import sys
 
 parser = ArgumentParser(
     description='Converts all files in current directory and subdirectories with the specified codec (default: alac) into the specified codec (default: flac).'
@@ -15,10 +14,10 @@ validInput = ['alac', 'flac', 'wav']
 args = parser.parse_args()
 
 if not args.input in validInput or not args.output in validInput:
-    sys.exit("Error: Supported formats are alac, flac, and wav.")
+    raise ValueError("Error: Supported formats are alac, flac, and wav.")
 
 if args.input == args.output:
-    sys.exit("Error: Input and output codecs cannot be the same.")
+    raise ValueError("Error: Input and output codecs cannot be the same.")
 
 input_extensions = {'wav': '.wav', 'alac': '.m4a', 'flac': '.flac'}
 codec_names = {'wav': 'pcm_s16le', 'alac': 'alac', 'flac': 'flac'}
